@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+body {
+    background-color: #0b1a2d;
+    color: #fff;
+    overflow-x: auto;
+}
+
+/* 顶部导航栏样式 */
+.top-navigation {
+    display: flex;
+    height: 60px;
+    background: rgba(10, 50, 120, 0.8);
+    border-bottom: 1px solid rgba(0, 135, 255, 0.5);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    width: 250px;
+}
+
+.logo-icon {
+    color: #00d5ff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: #00d5ff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navigation-items {
+    display: flex;
+    flex: 1;
+    overflow-x: auto;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 60px;
+    border-right: 1px solid rgba(0, 135, 255, 0.2);
+    white-space: nowrap;
+}
+
+.nav-item:hover {
+    background: rgba(0, 135, 255, 0.2);
+}
+
+.nav-icon {
+    color: #00d5ff;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.nav-text {
+    color: #fff;
+    font-size: 14px;
+}
+
+.expand-arrow {
+    color: #00d5ff;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* 标题区域样式 */
+.title-container {
+    height: 60px;
+    background: rgba(10, 50, 120, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 135, 255, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.title-background {
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InJnYmEoMTAsIDMwLCA2MCwgMC43KSIgcng9IjEwIi8+PHBhdGggZD0iTTAgMTAgTDYwICUgTDcwIDMwIEw4MCA4MCBMNDUgNjAgTDIwIDQ1IFoiIGZpbGw9InJnYmEoMCwgMjE1LCAyNTUsIDAuNSkiLz48L3N2Zz4=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 135, 255, 0.5);
+    box-sizing: border-box;
+}
+
+.title-content {
+    color: #00d5ff;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 213, 255, 0.7);
+    padding: 10px 20px;
+    background: rgba(10, 30, 60, 0.7);
+    border-radius: 5px;
+}
+
+/* 主要内容区域 */
+.main-content {
+    display: flex;
+    height: calc(100vh - 120px);
+    width: 150%;
+}
+
+/* 左侧侧边栏 */
+.sidebar-left {
+    width: 25%;
+    padding: 10px;
+    background: rgba(0, 30, 84, 0.3);
+    min-width: 300px;
+}
+
+/* 主要部分 - 左 */
+.main-left {
+    width: 25%;
+    padding: 10px;
+    background: rgba(0, 30, 84, 0.2);
+    min-width: 300px;
+}
+
+/* 中间部分 */
+.center {
+    width: 30%;
+    padding: 10px;
+    background: rgba(0, 30, 84, 0.1);
+    min-width: 300px;
+}
+
+/* 主要部分 - 右 */
+.main-right {
+    width: 20%;
+    padding: 10px;
+    background: rgba(0, 30, 84, 0.2);
+    min-width: 200px;
+}
+
+/* 右侧侧边栏 */
+.sidebar-right {
+    width: 20%;
+    padding: 10px;
+    background: rgba(0, 30, 84, 0.3);
+    min-width: 200px;
+}
+
+/* 卡片样式 */
+.card {
+    background: rgba(10, 50, 100, 0.6);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid rgba(0, 135, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 135, 255, 0.2);
+    overflow: hidden;
+}
+
+.card-title {
+    color: #0099ff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 135, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+.card-content {
+    padding: 5px 0;
+}
+
+/* 图表容器 */
+.chart-container {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    border: 1px solid rgba(0, 135, 255, 0.3);
+    box-shadow: inset 0 0 10px rgba(0, 135, 255, 0.3);
+    position: relative;
+}
+
+/* 两列布局 */
+.two-column-layout {
+    display: flex;
+    height: auto;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+/* 状态指示器 */
+.status-indicators {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.status-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(0, 30, 80, 0.5);
+    border-radius: 5px;
+}
+
+.indicator-label {
+    color: #00d5ff;
+    font-size: 14px;
+}
+
+.indicator-value {
+    color: #ffcc00;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 表格样式 */
+.data-table-container {
+    height: auto;
+    overflow: visible;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 8px 5px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-table th {
+    color: #0099ff;
+    background: rgba(0, 30, 80, 0.5);
+}
+
+/* 圆形数据容器 */
+.circular-data-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.circular-data {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-data-bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#00d5ff 0% 45%, #0b1a2d 45% 100%);
+    position: absolute;
+    z-index: 1;
+}
+
+.circular-data-value {
+    position: relative;
+    z-index: 2;
+    font-size: 48px;
+    font-weight: bold;
+    color: #00d5ff;
+}
+
+.circular-data-label {
+    position: relative;
+    z-index: 2;
+    color: #ccc;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* 带图标的表格 */
+.icon-cell {
+    width: 30px;
+    text-align: center;
+}
+
+/* 地图区域 */
+.map-area {
+    height: 400px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InJnYmEoMTAsIDMwLCA2MCwgMC43KSIgcng9IjEwIi8+PHBhdGggZD0iTTAgMTAgTDYwICUgTDcwIDMwIEw4MCA4MCBMNDUgNjAgTDIwIDQ1IFoiIGZpbGw9InJnYmEoMCwgMjE1LCAyNTUsIDAuNSkiLz48L3N2Zz4=');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    border: 1px solid rgba(0, 135, 255, 0.3);
+    box-shadow: inset 0 0 20px rgba(0, 135, 255, 0.3);
+}
+
+/* 数据标签 */
+.data-tag {
+    background: rgba(0, 135, 255, 0.3);
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+/* 最大负荷信息 */
+.max-load-info {
+    text-align: center;
+    padding: 5px 0;
+    font-size: 12px;
+    color: #ffcc00;
+}
+
+/* 指标卡片 */
+.metric-item {
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+.metric-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* 指标卡片组 */
+.metric-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 指标卡片 */
+.metric-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.metric-card {
+    background: rgba(0, 30, 80, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+/* 数据项 */
+.data-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-label {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.data-value {
+    color: #fff;
+}
+
+/* 网格容器 */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-item {
+    background: rgba(0, 30, 80, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    color: #00d5ff;
+    text-align: center;
+}
+
+/* 仪表盘容器 */
+.gauge-container {
+    padding: 10px;
+    background: rgba(0, 30, 80, 0.5);
+    border-radius: 5px;
+    margin: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gauge-title {
+    color: #00d5ff;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.gauge-placeholder {
+    height: 80px;
+    background: rgba(0, 40, 80, 0.3);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .sidebar-left, .main-left, .center, .main-right, .sidebar-right {
+        width: calc(25% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .sidebar-left, .main-left, .center, .main-right, .sidebar-right {
+        width: 100%;
+    }
+}
