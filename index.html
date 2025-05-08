@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国网邢台供电公司生产管控指挥平台</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="top-navigation">
+        <div class="logo-section">
+            <div class="logo-icon">📁</div>
+            <div class="logo-text">邢台数字化部场景展示</div>
+        </div>
+        
+        <div class="navigation-items">
+            <div class="nav-item">
+                <div class="nav-icon">📁</div>
+                <div class="nav-text">生产运行</div>
+                <div class="expand-arrow">▼</div>
+            </div>
+            
+            <div class="nav-item">
+                <div class="nav-icon">📁</div>
+                <div class="nav-text">优质服务</div>
+                <div class="expand-arrow">▼</div>
+            </div>
+            
+            <div class="nav-item">
+                <div class="nav-icon">📁</div>
+                <div class="nav-text">经营质效</div>
+                <div class="expand-arrow">▼</div>
+            </div>
+            
+            <div class="nav-item">
+                <div class="nav-icon">📁</div>
+                <div class="nav-text">电瞰邢台</div>
+                <div class="expand-arrow">▼</div>
+            </div>
+            
+            <div class="nav-item">
+                <div class="nav-icon">📁</div>
+                <div class="nav-text">县公司特色场景</div>
+                <div class="expand-arrow">▼</div>
+            </div>
+            
+            <div class="nav-item">
+                <div class="nav-icon">📁</div>
+                <div class="nav-text">查询工具</div>
+                <div class="expand-arrow">▼</div>
+            </div>
+            
+            <div class="nav-item">
+                <div class="nav-icon">📁</div>
+                <div class="nav-text">线损监测</div>
+                <div class="expand-arrow">▼</div>
+            </div>
+            
+            <div class="nav-item">
+                <div class="nav-icon">📁</div>
+                <div class="nav-text">欢迎</div>
+                <div class="expand-arrow">▼</div>
+            </div>
+            
+            <div class="nav-item">
+                <div class="nav-icon">📁</div>
+                <div class="nav-text">主目录</div>
+                <div class="expand-arrow">▼</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 标题区域 -->
+    <div class="title-container">
+        <div class="title-background">
+            <div class="title-content">
+                国网邢台供电公司生产管控指挥平台
+            </div>
+        </div>
+    </div>
+    
+    <!-- 主要内容区域 -->
+    <div class="main-content">
+        <!-- 左侧侧边栏 -->
+        <div class="sidebar-left">
+            <div class="card">
+                <div class="card-title">今日生产计划</div>
+                <div class="chart-container" id="today-plan-chart">
+                    <!-- 这里使用内联SVG作为示例图片 -->
+                    <svg width="100%" height="100%" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="400" height="200" fill="rgba(10, 30, 60, 0.7)" />
+                        <text x="50%" y="50%" font-size="16" text-anchor="middle" fill="#00d5ff">今日生产计划柱状图</text>
+                        <rect x="50" y="100" width="60" height="30" fill="rgba(0, 215, 255, 0.6)" />
+                        <rect x="120" y="80" width="60" height="40" fill="rgba(0, 215, 255, 0.6)" />
+                        <rect x="190" y="110" width="60" height="20" fill="rgba(0, 215, 255, 0.6)" />
+                        <rect x="260" y="60" width="60" height="50" fill="rgba(0, 215, 255, 0.6)" />
+                        <rect x="330" y="70" width="60" height="40" fill="rgba(0, 215, 255, 0.6)" />
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">主网设备重过载情况</div>
+                <div class="two-column-layout">
+                    <div class="column">
+                        <div class="status-indicators">
+                            <div class="status-indicator">
+                                <div class="indicator-label">重载</div>
+                                <div class="indicator-value">53</div>
+                            </div>
+                            <div class="status-indicator">
+                                <div class="indicator-label">过载</div>
+                                <div class="indicator-value">42</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="data-table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>日期</th>
+                                        <th>设备名称</th>
+                                        <th>最大负载率</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2025-04-27</td>
+                                        <td>设备A</td>
+                                        <td>87%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025-04-27</td>
+                                        <td>设备B</td>
+                                        <td>92%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025-04-27</td>
+                                        <td>设备C</td>
+                                        <td>78%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025-04-27</td>
+                                        <td>设备D</td>
+                                        <td>84%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">线路重过载情况</div>
+                <div class="two-column-layout">
+                    <div class="column">
+                        <div class="status-indicators">
+                            <div class="status-indicator">
+                                <div class="indicator-label">重载</div>
+                                <div class="indicator-value">37</div>
+                            </div>
+                            <div class="status-indicator">
+                                <div class="indicator-label">过载</div>
+                                <div class="indicator-value">28</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="data-table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>日期</th>
+                                        <th>线路名称</th>
+                                        <th>最大负载率</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2025-04-27</td>
+                                        <td>线路A</td>
+                                        <td>85%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025-04-27</td>
+                                        <td>线路B</td>
+                                        <td>90%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025-04-27</td>
+                                        <td>线路C</td>
+                                        <td>76%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025-04-27</td>
+                                        <td>线路D</td>
+                                        <td>81%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 主要部分 - 左 -->
+        <div class="main-left">
+            <div class="card">
+                <div class="card-title">35kV及以上设备运行情况</div>
+                <div class="circular-data-container">
+                    <div class="circular-data">
+                        <div class="circular-data-value">84</div>
+                        <div class="circular-data-label">负载率</div>
+                        <div class="circular-data-bg">
+                            <svg width="100%" height="100%" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="75" cy="75" r="70" fill="rgba(11, 26, 45, 0.7)" stroke="rgba(0, 215, 255, 0.6)" stroke-width="10" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <!-- 这里使用内联SVG作为示例图片 -->
+                        <svg width="100%" height="100%" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="150" fill="rgba(10, 30, 60, 0.7)" />
+                            <text x="50%" y="50%" font-size="14" text-anchor="middle" fill="#00d5ff">柱状图</text>
+                            <rect x="50" y="90" width="30" height="40" fill="rgba(0, 215, 255, 0.6)" />
+                            <rect x="90" y="70" width="30" height="60" fill="rgba(0, 215, 255, 0.6)" />
+                            <rect x="130" y="100" width="30" height="30" fill="rgba(0, 215, 255, 0.6)" />
+                            <rect x="170" y="60" width="30" height="70" fill="rgba(0, 215, 255, 0.6)" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">主网缺陷情况</div>
+                <div class="two-column-layout">
+                    <div class="column">
+                        <div class="pie-chart">
+                            <!-- 这里使用内联SVG作为示例图片 -->
+                            <svg width="100%" height="100%" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="150" height="150" fill="rgba(10, 30, 60, 0.7)" />
+                                <text x="50%" y="50%" font-size="14" text-anchor="middle" fill="#00d5ff">环状扇形图</text>
+                                <circle cx="75" cy="75" r="60" fill="none" stroke="rgba(0, 215, 255, 0.6)" stroke-width="10" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="data-table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>当前</th>
+                                        <th>剩余</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="icon-cell">🔥</td>
+                                        <td>本体发热</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icon-cell">雎</td>
+                                        <td>油气压力</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="icon-cell">🔗</td>
+                                        <td>外部设备</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">电网运维支撑工具</div>
+                <div class="grid-container">
+                    <div class="grid-item">变电专业缺陷分析工具</div>
+                    <div class="grid-item">无人机飞巡缺路管控</div>
+                    <div class="grid-item">公资台区负荷负载率实时监测</div>
+                    <div class="grid-item">配变盾过整治理辅助分析</div>
+                    <div class="grid-item">城区配网负荷模拟计算工具</div>
+                    <div class="grid-item">分布式光伏配变反送电实时监测</div>
+                    <div class="grid-item">煤改电专題监测</div>
+                    <div class="grid-item">城区不停电作业智息管控</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 中间部分 -->
+        <div class="center">
+            <div class="card">
+                <div class="card-title">当前电网负荷 3625.93MW</div>
+                <div class="map-area">
+                    <!-- 这里使用内联SVG作为示例图片 -->
+                    <svg width="100%" height="100%" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="600" height="400" fill="rgba(10, 30, 60, 0.7)" />
+                        <text x="50%" y="50%" font-size="18" text-anchor="middle" fill="#00d5ff">地图</text>
+                        <polygon points="100,100 200,50 300,150 400,80 500,180 450,300 350,250 250,350 150,200" fill="none" stroke="rgba(0, 215, 255, 0.6)" stroke-width="2" />
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">电网负荷</div>
+                <div class="chart-container">
+                    <!-- 这里使用内联SVG作为示例图片 -->
+                    <svg width="100%" height="100%" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="400" height="200" fill="rgba(10, 30, 60, 0.7)" />
+                        <text x="50%" y="30" font-size="14" text-anchor="middle" fill="#00d5ff">电网负荷图表</text>
+                        <path d="M50,150 L100,130 L150,100 L200,80 L250,120 L300,90 L350,110 L400,70" fill="none" stroke="rgba(0, 215, 255, 0.6)" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="max-load-info">
+                    2023年最大负荷：4,377.13 MW 时间：01/11 08:32
+                </div>
+            </div>
+        </div>
+        
+        <!-- 主要部分 - 右 -->
+        <div class="main-right">
+            <div class="card">
+                <div class="card-title">95598工单</div>
+                <div class="card-content">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="gauge-container">
+                                <div class="gauge-title">业务申请</div>
+                                <div class="gauge-placeholder">
+                                    <!-- 这里使用内联SVG作为示例图片 -->
+                                    <svg width="100%" height="100%" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100" height="80" fill="rgba(10, 30, 60, 0.7)" />
+                                        <text x="50%" y="40%" font-size="8" text-anchor="middle" fill="#00d5ff">业务申请仪表盘</text>
+                                        <circle cx="50" cy="40" r="30" fill="none" stroke="rgba(0, 215, 255, 0.6)" stroke-width="5" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="gauge-container">
+                                <div class="gauge-title">故障报修</div>
+                                <div class="gauge-placeholder">
+                                    <!-- 这里使用内联SVG作为示例图片 -->
+                                    <svg width="100%" height="100%" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100" height="80" fill="rgba(10, 30, 60, 0.7)" />
+                                        <text x="50%" y="40%" font-size="8" text-anchor="middle" fill="#00d5ff">故障报修仪表盘</text>
+                                        <circle cx="50" cy="40" r="30" fill="none" stroke="rgba(0, 215, 255, 0.6)" stroke-width="5" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="gauge-container">
+                                <div class="gauge-title">意见待办</div>
+                                <div class="gauge-placeholder">
+                                    <!-- 这里使用内联SVG作为示例图片 -->
+                                    <svg width="100%" height="100%" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100" height="80" fill="rgba(10, 30, 60, 0.7)" />
+                                        <text x="50%" y="40%" font-size="8" text-anchor="middle" fill="#00d5ff">意见待办仪表盘</text>
+                                        <circle cx="50" cy="40" r="30" fill="none" stroke="rgba(0, 215, 255, 0.6)" stroke-width="5" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="gauge-container">
+                                <div class="gauge-title">投诉</div>
+                                <div class="gauge-placeholder">
+                                    <!-- 这里使用内联SVG作为示例图片 -->
+                                    <svg width="100%" height="100%" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100" height="80" fill="rgba(10, 30, 60, 0.7)" />
+                                        <text x="50%" y="40%" font-size="8" text-anchor="middle" fill="#00d5ff">投诉仪表盘</text>
+                                        <circle cx="50" cy="40" r="30" fill="none" stroke="rgba(0, 215, 255, 0.6)" stroke-width="5" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="gauge-container">
+                                <div class="gauge-title">12398投诉</div>
+                                <div class="gauge-placeholder">
+                                    <!-- 这里使用内联SVG作为示例图片 -->
+                                    <svg width="100%" height="100%" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100" height="80" fill="rgba(10, 30, 60, 0.7)" />
+                                        <text x="50%" y="40%" font-size="8" text-anchor="middle" fill="#00d5ff">12398投诉仪表盘</text>
+                                        <circle cx="50" cy="40" r="30" fill="none" stroke="rgba(0, 215, 255, 0.6)" stroke-width="5" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">配网故障情况</div>
+                <div class="card-content">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>故障类型</th>
+                                <th>数量</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>变压器故障</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>线路故障</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>开关故障</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>用户设备故障</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>其他故障</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">配网设备运行情况</div>
+                <div class="card-content">
+                    <div class="metric-cards">
+                        <div class="metric-card">
+                            <div class="metric-value">136</div>
+                            <div class="metric-label">负载</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">613</div>
+                            <div class="metric-label">异常</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">159</div>
+                            <div class="metric-label">低电压</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 右侧侧边栏 -->
+        <div class="sidebar-right">
+            <div class="card">
+                <div class="card-title">庆祥帮办 <span style="color: #ffcc00;">120</span></div>
+                <div class="card-content">
+                    <div class="data-item">
+                        <div class="data-label">今日停电户</div>
+                        <div class="data-value">0</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-label">电流余额不足</div>
+                        <div class="data-value">0</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">敏感用户及个案停电情况</div>
+                <div class="card-content">
+                    <div class="data-tag">中小用户 561</div>
+                    <div class="data-tag">工业 5</div>
+                    <div class="data-tag">医院 136</div>
+                    <div class="data-item">
+                        <div class="data-label">今日停电户</div>
+                        <div class="data-value">0</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-label">已恢复</div>
+                        <div class="data-value">0</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">保供电网格抢修布点</div>
+                <div class="card-content">
+                    <div class="data-tag">抢修工单 2094</div>
+                    <div class="data-tag">抢修车辆 230</div>
+                    <div class="data-tag">抢修人员 338</div>
+                    <div class="data-tag">抢修布点 153</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">预警及值班信息</div>
+                <div class="card-content">
+                    <!-- 预警及值班信息内容 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
